@@ -64,6 +64,9 @@ x = sc.fit_transform(x)
 print('After scaling (x) by MinMaxScaler: = \n' , x)
 print('------------------------------------------------------------------------')
 
+#visual scalining
+dataset.hist(figsize=(15,15))
+
 #Spliting dataset into (Training set & Test set)
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.20,random_state=0, stratify=y, shuffle=True)
