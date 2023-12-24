@@ -40,8 +40,6 @@ print('------------------------------------------------------------------------'
 from sklearn.preprocessing import LabelEncoder
 encoder = LabelEncoder()
 dataset['species'] = encoder.fit_transform(dataset['species'])
-# dataset['Embarked'] = encoder.fit_transform(dataset['Embarked'])
-# dataset['Name'] = encoder.fit_transform(dataset['Name'])
 print('After Encoding: = \n' , dataset.head())
 print('------------------------------------------------------------------------')
 
@@ -65,9 +63,6 @@ sc = MinMaxScaler()
 x = sc.fit_transform(x)
 print('After scaling (x) by MinMaxScaler: = \n' , x)
 print('------------------------------------------------------------------------')
-
-# #visual scalining
-# dataset.hist(figsize=(15,15))
 
 #Spliting dataset into (Training set & Test set)
 from sklearn.model_selection import train_test_split
